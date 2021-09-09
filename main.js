@@ -46,7 +46,6 @@ const fetchIssues = () => {
   }
   const issuesList = document.getElementById('issuesList');
   issuesList.innerHTML = '';
-  console.log(issues);
   for (let i = 0; i < issues.length; i++){
     const {id, description, severity, assignedTo, status} = issues[i];
 
