@@ -23,12 +23,14 @@ function submitIssue(e) {
 
 const closeIssue = id => {
   const issues = JSON.parse(localStorage.getItem('issues'));
+   // solves 2
   const currentIssue = issues.find(issue => parseInt(issue.id) === id);
   currentIssue.status = 'Closed';
   localStorage.setItem('issues', JSON.stringify(issues));
   fetchIssues();
 }
 
+// solves 3
 const deleteIssue = id => {
   const issues = JSON.parse(localStorage.getItem('issues'));
   const remainingIssues = issues.filter(issue=>parseInt(issue.id)!==id)
